@@ -5,14 +5,17 @@ import Image from "next/image";
 
 export function HeroScrollDemo() {
   return (
-    <div className="flex flex-col overflow-hidden pb-40">
+    <div className="flex flex-col overflow-hidden">
       <ContainerScroll
         titleComponent={
           <>
-            <h1 className="text-4xl font-semibold text-black dark:text-white">
-              Unleash the power of <br />
-              <span className="text-4xl md:text-[6rem] font-bold mt-1 leading-none">
-                Scroll Animations
+            <p className="font-mono text-xs uppercase tracking-[0.2em] text-cobalt">
+              Componente React · framer-motion
+            </p>
+            <h1 className="mt-4 font-display text-4xl font-semibold text-ink">
+              Una pantalla que se endereza <br />
+              <span className="mt-1 block text-5xl leading-none font-extrabold tracking-tight md:text-[6rem]">
+                mientras bajas
               </span>
             </h1>
           </>
@@ -20,11 +23,12 @@ export function HeroScrollDemo() {
       >
         <Image
           src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=2400&q=80"
-          alt="Laptop on a desk showing code in an editor"
+          alt="Portátil sobre un escritorio mostrando código en un editor"
           height={720}
           width={1400}
           className="mx-auto rounded-2xl object-cover h-full object-left-top"
           draggable={false}
+          priority
         />
       </ContainerScroll>
     </div>
